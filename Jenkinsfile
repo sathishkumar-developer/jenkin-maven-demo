@@ -13,14 +13,17 @@ pipeline{
      }
      stage("build"){
         steps {
-            dir("jenkin-maven-demo")
-            sh "mvn clean install"
+            dir("jenkin-maven-demo"){
+                sh "mvn clean install"
+            }
+            
         }
      }
      stage("test"){
         steps {
-            dir("jenkin-maven-demo")
-            sh "mvn test"
+            dir("jenkin-maven-demo") {
+                sh "mvn test"
+            }
         }
      }
    }
