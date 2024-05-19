@@ -18,5 +18,12 @@ pipeline{
             } 
         }
      }
+     stage("run"){
+        steps {
+            dir("jenkin-maven-demo/target"){
+                sh "java -jar maven-jenkins-demo-0.0.1-SNAPSHOT.jar"
+            } 
+        }
+     }
    }
 }
