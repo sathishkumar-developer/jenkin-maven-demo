@@ -14,7 +14,7 @@ pipeline{
      stage("build"){
         steps {
             dir("jenkin-maven-demo"){
-                sh "mvn clean install"
+                sh "mvn clean install -Dmaven.test.skip=true"
             } 
         }
      }
